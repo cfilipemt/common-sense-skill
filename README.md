@@ -8,11 +8,27 @@
 [![Production Tested](https://img.shields.io/badge/production-battle--tested-success)]()
 [![Stars](https://img.shields.io/github/stars/cfilipemt/common-sense-skill?style=social)](https://github.com/cfilipemt/common-sense-skill)
 
+> **One file. 9 questions. Stops your AI agent from `rm -rf`-ing your repo, spamming clients, or buying €5K hardware when €30 solves it.**
+
+A drop-in skill that turns any AI agent from a *blind executor* into a *thoughtful operator* — by forcing a practical-judgment check before every consequential action.
+
+### TL;DR
+
+```bash
+git clone https://github.com/cfilipemt/common-sense-skill ~/.claude/skills/common-sense
+# Same drop for Codex, Cursor, OpenClaw, Aider — into their skills dir.
+```
+
+Auto-fires before any consequential action. No config.
+
+👉 **[See 10 real production incidents this prevents](./examples/README.md)**
+🐦 **[Launch copy / share snippets](./SOCIAL.md)**
+
+---
+
 > **Intelligence without common sense is dangerous.**
 > **Power without judgment is destruction.**
 > **Speed without clarity creates chaos.**
-
-A single skill file that turns any AI agent from a *blind executor* into a *thoughtful operator* — by forcing a practical-judgment check before every consequential action.
 
 ---
 
