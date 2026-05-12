@@ -1,5 +1,7 @@
 # Common Sense Skill
 
+![Common Sense Skill — Judgment First. Action Second.](cs-banner.png)
+
 A skill that injects **common-sense judgment** as supreme authority before any AI agent decision.
 
 > Intelligence without common sense is dangerous.
