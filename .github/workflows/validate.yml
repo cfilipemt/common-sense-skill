@@ -1,0 +1,22 @@
+name: Validate Skill
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check SKILL.md exists
+        run: test -f SKILL.md
+      - name: Validate YAML frontmatter
+        run: |
+          head -10 SKILL.md | grep -q "^name:"
+          head -10 SKILL.md | grep -q "^description:"
+      - name: Check size sane
+        run: |
+          SIZE=$(wc -c < SKILL.md)
+          test "$SIZE" -gt 500 -a "$SIZE" -lt 50000
+      - name: README references SKILL.md
+        run: grep -q "SKILL.md" README.md
