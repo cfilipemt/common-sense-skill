@@ -270,6 +270,31 @@ Tested = used in real production stack. ➖ = should work, untested by maintaine
 
 ---
 
+## Related Work
+
+The phrase "common sense" appears in AI research with a different meaning.
+Worth understanding the distinction before you compare:
+
+| Project | Focus | Layer |
+|---|---|---|
+| [ConceptNet](https://github.com/commonsense/conceptnet5) (MIT, 2.9k⭐) | Factual world knowledge graph — "apples are fruit", "rain makes things wet" | **Static facts** |
+| [ConceptNet Numberbatch](https://github.com/commonsense/conceptnet-numberbatch) (1.3k⭐) | Pretrained word embeddings derived from the above | **Static facts** |
+| [Open Mind Common Sense](https://github.com/commonsense/omcs) | The umbrella research project that started it all (MIT Media Lab, 1999) | **Static facts** |
+| **This skill** | A judgment protocol applied at the moment of action | **Runtime decision** |
+
+ConceptNet answers *"what does the world look like?"*
+This skill answers *"should I actually do this?"*
+
+Both matter. Neither replaces the other. An agent with a great world model
+can still confidently `rm -rf` your repo — because knowing facts isn't the same
+as knowing when to stop and ask.
+
+If you're building agents and want both:
+- Use ConceptNet (or embeddings) for retrieval and grounding
+- Use this skill at the decision gate, before irreversible actions
+
+---
+
 ## Contributing
 
 PRs welcome. Keep the protocol short. Common sense is short by design.
